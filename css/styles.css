@@ -491,15 +491,32 @@ section,
 }
 /* -------- PRODUCTS ------- */
 .products {
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 .products-our {
-    
+    margin-bottom: 32px;
 }
 .our-products {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .products-item {
+    flex: 0 1 auto;
+    max-width: 335px;
+    padding: 32px 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(17, 17, 17, 0.1);
+    background: #fff;
+    text-align: center;
 }
 .products-item-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 8px;
 }
 .products-title {
     color: var(--main-text-color);
@@ -507,7 +524,8 @@ section,
     font-weight: 600;
     line-height: 1.33;
     letter-spacing: -0.02em;
-    text-align: left;
+    text-align: center;
+    margin-bottom: 2px;
 }
 .products-text {
     color: var(--main-text-color);
@@ -515,7 +533,8 @@ section,
     font-weight: 400;
     line-height: 1.17;
     letter-spacing: -0.02em;
-    text-align: left;
+    text-align: center;
+    margin-bottom: 18px;
 }
 .products-btn {
     color: var(--main-text-color);
@@ -523,17 +542,52 @@ section,
     font-weight: 600;
     line-height: 1.21;
     letter-spacing: 0em;
-    text-align: left;
+    text-align: center;
+    padding: 8px 20px;
+    border-radius: 100px;
+    border: 1px solid rgba(17, 17, 17, 0.1);
+    background: #fafafa;
+    cursor: pointer;
+    transition: background-color 300ms ease, border-color 300ms ease;
+}
+.products-btn:hover,
+.products-btn:focus {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
 }
 /* -------- SELLERS ------- */
 .sellers {
+    padding: 50px 0;
 }
 .sellers-top {
-   
+    margin-bottom: 32px;
+    text-align: center;
 }
 .sellers-top-img {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.sellers-top-img li {
+    flex: 0 1 auto;
+    max-width: 335px;
+    position: relative;
 }
 .sellers-img {
+    width: 100%;
+    max-width: 335px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+.sellers-img-expanded {
+    transform: scale(1.2);
+    z-index: 10;
 }
 /* -------- LOVED ------- */
 .loved {

@@ -3,6 +3,7 @@
 
 import './modal';
 import './menu';
+import './sellers';
 
 console.log('Simply Chocolate - TypeScript loaded successfully');
 
