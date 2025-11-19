@@ -31,13 +31,24 @@ body {
     background: #FAFAFA;
 
 }
+
+/* Убираем все обводки (outline) */
+*,
+*::before,
+*::after {
+    outline: none !important;
+}
+
+section,
+.container {
+    outline: none !important;
+}
+
 .container {
     width: 100%;
     padding-left: 10px;
     padding-right: 10px;
     margin: 0 auto;
-    outline: 2px solid red;
-    
 }
 .visually-hidden {
     position: absolute;
@@ -129,7 +140,6 @@ body {
 .header-socials-icon {
     width: 24px;
     height: 24px;
-    color: #be1515;
 }
 .mob-menu-list {
   padding-left: 28px;

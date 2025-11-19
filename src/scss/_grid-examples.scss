@@ -1,0 +1,100 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+// Modern CSS Grid examples
+
+// Products grid with auto-fit (responsive without media queries)
+.our-products {
+  @include grid-layout(1, $spacing-sm, true);
+  
+  // Container query for responsive columns
+  container-type: inline-size;
+  container-name: products;
+  
+  @container products (min-width: 480px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @container products (min-width: 768px) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: $spacing-md;
+  }
+}
+
+// Taste items grid
+.taste-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-sm;
+  
+  container-type: inline-size;
+  container-name: taste;
+  
+  @container taste (min-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @container taste (min-width: 900px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+// Advantages grid with auto-fit
+.advantages-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: $spacing-sm;
+  
+  container-type: inline-size;
+  
+  @container (min-width: 768px) {
+    gap: $spacing-md;
+  }
+}
+
+// Loved reviews grid
+.loved-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-xl;
+  
+  container-type: inline-size;
+  container-name: loved;
+  
+  @container loved (min-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: $spacing-lg;
+  }
+  
+  @container loved (min-width: 900px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+// Footer grid layout
+.footer-top {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-md;
+  
+  container-type: inline-size;
+  
+  @container (min-width: 768px) {
+    grid-template-columns: 1fr auto;
+    align-items: start;
+  }
+}
+
+.footer-menu-top {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-md;
+  
+  container-type: inline-size;
+  
+  @container (min-width: 768px) {
+    grid-template-columns: auto 1fr;
+    align-items: start;
+  }
+}
+

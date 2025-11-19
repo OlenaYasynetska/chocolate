@@ -1,0 +1,18 @@
+// Main SCSS file - imports all partials
+
+// 1. Variables (must be first)
+@use 'variables' as *;
+
+// 2. Mixins
+@use 'mixins' as *;
+
+// 3. Base styles
+@use 'base';
+
+// 4. Grid examples with Container Queries
+@use 'grid-examples';
+
+// 5. Component styles (you can import existing CSS converted to SCSS)
+// For now, we'll keep the old CSS files working
+// You can gradually convert them to SCSS modules
+

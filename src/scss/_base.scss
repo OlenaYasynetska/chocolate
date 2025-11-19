@@ -1,0 +1,102 @@
+@use 'variables' as *;
+
+// Reset and base styles
+:root {
+  --accent-color: #{$accent-color};
+  --main-text-color: #{$main-text-color};
+  --secondary-text-color: #{$secondary-text-color};
+}
+
+p,
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: $font-family;
+  background: $light-bg;
+  color: $main-text-color;
+}
+
+// Убираем все обводки (outline) и дебаг-стили
+*,
+*::before,
+*::after {
+  outline: none !important;
+}
+
+section,
+.container {
+  outline: none !important;
+}
+
+// Modern container with container queries support
+.container {
+  width: 100%;
+  padding-left: $spacing-xs;
+  padding-right: $spacing-xs;
+  margin: 0 auto;
+  
+  // Container query for responsive behavior
+  container-type: inline-size;
+  container-name: main-container;
+  
+  @container main-container (min-width: 375px) {
+    max-width: 375px;
+  }
+  
+  @container main-container (min-width: 768px) {
+    max-width: 734px;
+  }
+  
+  @container main-container (min-width: 1166px) {
+    max-width: 1166px;
+  }
+}
+
+.visually-hidden {
+  @include visually-hidden;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.list {
+  list-style-type: none;
+}
+
+.section-title {
+  color: var(--main-text-color);
+  @include font(20px, 600, 1.2, -0.03em);
+  text-align: center;
+  
+  span {
+    color: var(--accent-color);
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+

@@ -1,0 +1,66 @@
+// Mixins for responsive typography
+@mixin font($size: $font-size-base, $weight: 400, $line-height: $line-height-base, $letter-spacing: -0.02em) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+}
+
+// Mixin for transitions
+@mixin transition($property: all, $duration: $transition-duration, $timing: $transition-timing) {
+  transition: $property $duration $timing;
+}
+
+// Mixin for visually hidden elements
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+// Mixin for container queries (modern approach)
+@mixin container-query($min-width) {
+  container-type: inline-size;
+  
+  @container (min-width: $min-width) {
+    @content;
+  }
+}
+
+// Mixin for CSS Grid layouts
+@mixin grid-layout($columns: 1, $gap: $spacing-sm, $auto-fit: false) {
+  display: grid;
+  gap: $gap;
+  
+  @if $auto-fit {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  } @else {
+    grid-template-columns: repeat($columns, 1fr);
+  }
+}
+
+// Mixin for flexbox centering
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Mixin for retina images
+@mixin retina-image($image-1x, $image-2x) {
+  background-image: url($image-1x);
+  
+  @media (min-device-pixel-ratio: 2),
+         (min-resolution: 192dpi),
+         (min-resolution: 2dppx) {
+    background-image: url($image-2x);
+  }
+}
+
