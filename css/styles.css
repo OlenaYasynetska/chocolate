@@ -448,16 +448,24 @@ section,
     justify-content: space-between; */
 }
 
+.made-picture {
+    display: block;
+    width: 100%;
+}
+
 .made-content {
     background-color: #ffffff; 
     padding: 20px 14px;
     border-radius: 15px;
     max-width: 516px;
-    margin-bottom: 20px;
+    
 }
 .made-image {
+    display: block;
     margin-bottom: 20px;
     width: 100%;
+    height: auto;
+    border-radius: 15px;
 }
 .made-list {
     max-width: 425px;
@@ -560,7 +568,7 @@ section,
     padding: 50px 0;
 }
 .sellers-top {
-    margin-bottom: 32px;
+    margin-bottom: 60px;
     text-align: center;
 }
 .sellers-top-img {

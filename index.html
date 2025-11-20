@@ -175,7 +175,7 @@
                     </p>
                 </li>
                 <li class="taste-item">
-                    <img srcset="./images/milk-white.png 1x, ./images/milk-white_2x.png 2x"
+                    <img srcset="./images/milk-white.png 1x, ./images/milk-white_x2.png 2x"
                     src="./images/milk-white.png" alt="milk" width="206" height="160" class="taste-img">
                     <h3 class="taste-subtitle dark">MILK</h3>
                     <p class="taste-cover-text">
@@ -183,7 +183,7 @@
                     </p>
                 </li>
                 <li class="taste-item">
-                    <img srcset="./images/nuts.png 1x, ./images/nuts_2x.png 2x"
+                    <img srcset="./images/nuts.png 1x, ./images/nuts_2.png 2x"
                     src="./images/nuts.png" alt="nuts" width="206" height="160" class="taste-img">
                     <h3 class="taste-subtitle light">NUTS</h3>
                     <p class="taste-cover-text">
@@ -191,7 +191,7 @@
                     </p>
                     </li>
                 <li class="taste-item">
-                    <img srcset="./images/chocolate.png 1x, ./images/chocolate_2x.png 2x"
+                    <img srcset="./images/chocolate.png 1x, ./images/chocolate_x2.png 2x"
                     src="./images/chocolate.png" alt="chocolate" width="206" height="160" class="taste-img">
                     <h3 class="taste-subtitle dark">SEMI - SWEET CHOCOLATE</h3>
                     <p class="taste-cover-text">
@@ -205,15 +205,11 @@
             <div class="container">
             <h2 class="made-title section-title">HOW IT’S <span>MADE?</span></h2>
             <div class="made-wrap">
-                <picture>
-                    <source srcset="./images/chocolates-desktop.jpg 1x, ./images/chocolates-desktop_2x.jpg 2x" media="min-width: 1166px">
-                </picture>    
-                <picture>
-                    <source srcset="./images/chocolates-tablet.jpg 1x, ./images/chocolates-tablet_2x.jpg 2x" media="min-width: 768px">
-                </picture>  
-                <picture>
-                    <source srcset="./images/chocolates-mobile_2x.jpg 1x, ./images/chocolates-mobile_2x.jpg 2x" media="min-width: 320px">
-                    <img src="./images/chocolates-desktop.jpg" alt="chocolates" class="made-image" width="614">
+                <picture class="made-picture">
+                    <source srcset="./images/chocolates-desktop.jpg 1x, ./images/chocolates-desktop_x2.jpg 2x" media="(min-width: 1166px)">
+                    <source srcset="./images/chocolates-tablet.jpg 1x, ./images/chocolates-tablet_x2.jpg 2x" media="(min-width: 768px)">
+                    <source srcset="./images/chocolates-mobile.jpg 1x, ./images/chocolates-mobile_x2.jpg 2x" media="(max-width: 767px)">
+                    <img src="./images/chocolates-desktop.jpg" alt="chocolate preparation" class="made-image" width="616" height="400">
                 </picture>  
             <!-- <img src="./images/chocolates-desktop.jpg" alt="chocolates" class="made-image" width="600" height="400"> -->
             <div class="made-content">
